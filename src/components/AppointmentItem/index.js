@@ -17,7 +17,7 @@ const AppointmentItem = props => {
           className="card-button"
           onClick={starredFunc}
           type="button"
-          testid="start"
+          testid="star"
         >
           <img src={statusofStar} className="each-image" alt="star" />
         </button>

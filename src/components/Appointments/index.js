@@ -4,8 +4,9 @@ import {v4 as uuidv4} from 'uuid'
 import AppointmentItem from '../AppointmentItem/index'
 import './index.css'
 
- const initialappointmentsList = []
-// {id: uuidv4(), username: 'vamsi', date: '13 Sep 2022, Thur', isStarred: true} 
+const initialappointmentsList = [
+  {id: uuidv4(), username: 'vamsi', date: '13 Sep 2022, Thur', isStarred: true},
+]
 class Appointments extends Component {
   state = {
     appointmentsList: initialappointmentsList,
@@ -75,6 +76,7 @@ class Appointments extends Component {
                 type="text"
                 placeholder="Title"
                 className="input"
+                id="text"
                 onChange={this.inputName}
                 value={username}
               />
@@ -85,7 +87,8 @@ class Appointments extends Component {
                 type="date"
                 className="date-box"
                 onChange={this.inputDate}
-                placeholder="Date"
+                placeholder="dd/mmm/yyyy"
+                id="date"
                 value={date}
               />
               <button className="button" type="submit">
